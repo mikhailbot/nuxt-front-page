@@ -15,7 +15,7 @@ export default {
 
   computed: {
     url: function() {
-      if (this.link.type === "ask") {
+      if (this.link.url.startsWith("item?id=")) {
         return `https://news.ycombinator.com/${this.link.url}`;
       } else {
         return this.link.url;
